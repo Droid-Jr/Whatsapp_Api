@@ -22,7 +22,7 @@ router.post("/login", loginUserValidator, loginUser);
 
 
 // proteger este endpoint - ruta
-router.get("/users", authenticate, getUsers );
+router.get("/users", getUsers );
 router.get("/users/:id", authenticate, getUser );
 router.put("/users/:id", authenticate, updateUser );
 
