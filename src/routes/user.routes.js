@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const { createUser, loginUser, getUsers,updateUser,getUser } = require("../controllers/users.controller");
 const {
-  loginUserValidator,
+ loginUserValidator,
   registerUserValidator,
 } = require("../validators/users.validators");
 const authenticate = require("../middlewares/auth.middleware");
@@ -16,7 +16,7 @@ const router = Router();
 // ? que campos debo validar
 // ? que deberia validar por cada campo
 
-router.post("/users", registerUserValidator, createUser); //
+router.post("/users",registerUserValidator, createUser); //
 
 router.post("/login", loginUserValidator, loginUser);
 
